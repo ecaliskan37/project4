@@ -6,7 +6,8 @@ const DataShow = () => {
 
   useEffect(() => {
     async function getData() {
-      const url = `https://jsonplaceholder.typicode.com/todos/${button}`
+      const url = 'https://dummyjson.com/quotes/random'
+      // `https://jsonplaceholder.typicode.com/todos/${button}`
       const response = await fetch(url, {
         'Access-Control-Allow-Origin': url,
         'Access-Control-Allow-Headers':
@@ -50,10 +51,10 @@ const DataShow = () => {
           >
             <p
               style={{ fontWeight: 'bold', backgroundColor: 'white' }}
-            >{`"${item?.title}`}</p>
+            >{`"${item?.quote}`}</p>
             <p
               style={{ fontWeight: 'bold', backgroundColor: 'white' }}
-            >{`-${item?.id}`}</p>
+            >{`-${item?.author}`}</p>
           </div>
         )
       })}
